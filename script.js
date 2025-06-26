@@ -1,6 +1,7 @@
 function minDate(dates) {
   
-  return dates.reduce((min, date) => date < min ? date : min);
+  if (dates.length === 0) return null; // Handle empty array case
+    return dates.reduce((min, date) => date < min ? date : min, dates[0]);
 }
 }
 
